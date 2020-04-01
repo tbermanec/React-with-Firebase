@@ -24,7 +24,7 @@ class SignInFormBase extends Component {
   constructor(props) {
     super(props);
 
-    this.state = { ...INITIAL_STATE }
+    this.state = { ...INITIAL_STATE };
   }
 
   onSubmit = event => {
@@ -47,7 +47,11 @@ class SignInFormBase extends Component {
     this.setState({ [event.target.name]: event.target.value });
   }
   render() {
-    const { email, password, error } = this.state;
+    const {
+      email,
+      password,
+      error
+    } = this.state;
 
     const isInvalid = password === '' || email === '';
 
